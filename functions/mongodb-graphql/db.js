@@ -1,6 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
-const URI = "";
-const DB_NAME = "todos";
+const URI = process.env.DB_URI;
+const DB_NAME = process.env.DB_NAME;
 
 let cachedDb = null;
 module.exports = () => {

@@ -5,15 +5,17 @@ A Netlify functions template for Apollo Server GraphQL API with MongoDB.
 ## Local Development
 Clone the repository and run ```npm i``` at the root of repository to install all dependencies.
 
-### db.js
+### Setup Environment Variables in your Netlify Site Settings
 
-Edit ```db.js``` with your MongoDB connection string and Database Name.
+Login to your [Netlify](https://app.netlify.com) account. Go to and select your site, then go to:
+```Site Settings > Build & Deploy > Environment```
+
+Then click on **Edit Variables** and setup the following variables:
+
 ```
-const URI = "";
-const DB_NAME = "todos";
+DB_URI = <your-mongodb-connection-uri>
+DB_NAME = <mongodb-database-name>
 ```
-
-
 
 ### typedefs.js
 
@@ -47,4 +49,4 @@ Edit ```resolvers.js``` to return the resolvers for your schema.
 
 ### Run Dev Server
 
-Open a terminal and run ```netlify dev``` to start the dev server. It will start Netlify Dev Sever on http://localhost:8888. To access GraphQL Playground, visit http://localhost:8888/.netlify/functions/mongodb-graphql in a browser window.
+Open a terminal and run ```netlify dev``` to start the dev server. Netlify Dev will automatically fetch and inject the environment variables from your Netlify Site Settings and start a local dev sever on http://localhost:8888. To access GraphQL Playground, visit http://localhost:8888/.netlify/functions/mongodb-graphql in a browser window.
