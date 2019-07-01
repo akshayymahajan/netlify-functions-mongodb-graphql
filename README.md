@@ -2,6 +2,16 @@
 
 A Netlify functions template for Apollo Server GraphQL API with MongoDB.
 
+## Add to Existing Project
+cd into your project directory and run `netlify functions:create` to create a new function.
+
+select `*** Clone template from Github URL ***` from the list of templates.
+
+In the URL field enter `https://github.com/akshayymahajan/netlify-functions-mongodb-graphql/tree/master/functions/mongodb-graphql`
+
+Netlify CLI will download the function and install all the dependencies in your project.
+
+
 ## Local Development
 Clone the repository and run the following commands to install all the dependencies:
 ```
